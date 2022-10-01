@@ -142,7 +142,7 @@ void epd_3in71_fpc2302_display(unsigned char *img_black, unsigned char *img_red)
 	{
 		for (j = 0; j < width; j++)
 		{
-			epd_3in71_fpc2302_write_data(img_red[j + i * width]);
+			epd_3in71_fpc2302_write_data(~img_red[j + i * width]);
 		}
 	}
 
