@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "epd_common.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -85,13 +86,29 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  epaper_display_t epd;
 
+  memset(&epd, 0, sizeof(epd));
+
+  epd.epd_pn = EPD_PN_FPC2302;
+
+  epaper_display_init(&epd);
+
+  epd.epd_init();
+  epd.epd_clear();
+  HAL_Delay(500);
+
+#ifdef EPD_BUILTIN_TEST_IMG
+  epd.epd_display(epd.gImage_bw, epd.gImage_r);
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_GPIO_TogglePin(LED4_GPIO_Port, LED4_Pin);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
