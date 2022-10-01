@@ -94,13 +94,16 @@ int main(void)
 
   epaper_display_init(&epd);
 
-  epd.epd_init();
-  epd.epd_clear();
-  HAL_Delay(500);
+  if(EPD_INIT_DONE == epd.epd_inited)
+  {
+		epd.epd_init();
+		epd.epd_clear();
+		HAL_Delay(500);
 
 #ifdef EPD_BUILTIN_TEST_IMG
-  epd.epd_display(epd.gImage_bw, epd.gImage_r);
+		epd.epd_display(epd.gImage_bw, epd.gImage_r);
 #endif
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */

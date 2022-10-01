@@ -34,6 +34,7 @@ int epaper_display_init(epaper_display_t *epd)
 		epd->gImage_bw = gImage_4in2depgbns_bw;
 		epd->gImage_r = gImage_4in2depgbns_r;
 #endif
+		epd->epd_inited = EPD_INIT_DONE;
 		break;
 	case EPD_PN_FPC2302:
 		epd->epd_init = epd_3in71_fpc2302_init;
@@ -44,6 +45,7 @@ int epaper_display_init(epaper_display_t *epd)
 		epd->gImage_bw = gImage_3in71fpc2302_bw;
 		epd->gImage_r = gImage_3in71fpc2302_r;
 #endif
+		epd->epd_inited = EPD_INIT_DONE;
 	default:
 		break;
 	}

@@ -24,9 +24,18 @@ typedef enum
 	EPD_PN_MAX
 }epd_part_number;
 
+typedef enum
+{
+	EPD_INIT_MIN = -1,
+	EPD_INIT_NONE = 0,
+	EPD_INIT_DONE = 1,
+	EPD_INIT_MAX
+}epd_init_sta;
+
 typedef struct epaper_display
 {
 	epd_part_number epd_pn;
+	epd_init_sta epd_inited;
 	char epd_pn_str[MAX_EPD_PN_STR_LEN];
 	unsigned int epd_width;
 	unsigned int epd_height;
