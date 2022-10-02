@@ -10,11 +10,8 @@
 
 #include "epd_common.h"
 
-#define EPD_BUILTIN_TEST_IMG
-#ifdef EPD_BUILTIN_TEST_IMG
 extern unsigned char gImage_3in71fpc2302_bw[];
 extern unsigned char gImage_3in71fpc2302_r[];
-#endif
 
 #define EPD_3IN71_FPC2302_WIDTH				(240)
 #define EPD_3IN71_FPC2302_HEIGHT			(416)

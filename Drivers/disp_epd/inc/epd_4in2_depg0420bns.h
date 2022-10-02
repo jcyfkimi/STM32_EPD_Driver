@@ -11,11 +11,8 @@
 #include "epd_common.h"
 
 
-#define EPD_BUILTIN_TEST_IMG
-#ifdef EPD_BUILTIN_TEST_IMG
 extern unsigned char gImage_4in2depgbns_bw[];
 extern unsigned char gImage_4in2depgbns_r[];
-#endif
 
 #define EPD_4IN2_DEPG0420BNS_WIDTH			(400)
 #define EPD_4IN2_DEPG0420BNS_HEIGHT			(300)

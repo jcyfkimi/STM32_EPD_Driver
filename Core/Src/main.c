@@ -90,7 +90,7 @@ int main(void)
 
   memset(&epd, 0, sizeof(epd));
 
-  epd.epd_pn = EPD_PN_FPC2302;
+  epd.epd_pn = EPD_PN_BE2266ES0550;
 
   epaper_display_init(&epd);
 

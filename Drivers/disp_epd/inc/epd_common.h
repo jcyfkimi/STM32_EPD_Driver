@@ -11,16 +11,23 @@
 #include <stdio.h>
 #include "epd_4in2_depg0420bns.h"
 #include "epd_3in71_fpc2302.h"
+#include "epd_2in66_be2266es0550.h"
 
 #define MAX_EPD_PN_STR_LEN		(32)
 
 #define EPD_BUILTIN_TEST_IMG
+#ifdef EPD_BUILTIN_TEST_IMG
+//#define EPD_BUILTIN_TEST_IMG_FOR_DEPG0420BNS
+//#define EPD_BUILTIN_TEST_IMG_FOR_FPC2302
+#define EPD_BUILTIN_TEST_IMG_FOR_BE2266ES0550
+#endif
 
 typedef enum
 {
 	EPD_PN_MIN = 0,
 	EPD_PN_DEPG0420BNS = 1,
 	EPD_PN_FPC2302 = 2,
+	EPD_PN_BE2266ES0550 = 3,
 	EPD_PN_MAX
 }epd_part_number;
 
