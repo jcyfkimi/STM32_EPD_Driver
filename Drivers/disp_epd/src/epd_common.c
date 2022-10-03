@@ -46,6 +46,7 @@ int epaper_display_init(epaper_display_t *epd)
 		epd->gImage_r = gImage_3in71fpc2302_r;
 #endif
 		epd->epd_inited = EPD_INIT_DONE;
+		break;
 	case EPD_PN_BE2266ES0550:
 		epd->epd_init = epd_2in66_be2266es0550_init;
 		epd->epd_clear = epd_2in66_be2266es0550_clear;
@@ -56,6 +57,7 @@ int epaper_display_init(epaper_display_t *epd)
 		epd->gImage_r = gImage_2in66_be2266es0550_r;
 #endif
 		epd->epd_inited = EPD_INIT_DONE;
+		break;
 	default:
 		break;
 	}
