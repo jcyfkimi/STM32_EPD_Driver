@@ -31,4 +31,9 @@ This is a project for driving the ePaper display panel with STM32, here I'm usin
 20221002 Kimi Jin:
 
 	1. Adding support for BE2266ES0550/TC026SC1C3-S5(tested) epd
+	
+20221004 Kimi Jin:
+
+	1. Fixing the init and turn on parameters for DEPG0420BNS
+	2. Now DEPG0420BNS is fully supported and been tested
 
