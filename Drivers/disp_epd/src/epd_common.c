@@ -58,6 +58,17 @@ int epaper_display_init(epaper_display_t *epd)
 #endif
 		epd->epd_inited = EPD_INIT_DONE;
 		break;
+	case EPD_PN_E154A05N:
+		epd->epd_init = epd_1in54_e154a05n_init;
+		epd->epd_partial_init = epd_1in54_e154a05n_init_partial;
+		epd->epd_clear = epd_1in54_e154a05n_clear;
+		epd->epd_display = epd_1in54_e154a05n_display;
+		epd->epd_sleep = epd_1in54_e154a05n_sleep;
+#ifdef EPD_BUILTIN_TEST_IMG_FOR_E154A05N
+		epd->gImage_bw = gImage_1in54_e154a05n_bw;
+#endif
+		epd->epd_inited = EPD_INIT_DONE;
+		break;
 	default:
 		break;
 	}

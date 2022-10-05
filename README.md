@@ -20,6 +20,7 @@ This is a project for driving the ePaper display panel with STM32, here I'm usin
 1. DEPG0420BNS, 4.2 inch black/white ePaper display panel
 2. Unknown 3.71 inch black/white/red ePaper display panel,FPC labeled as "FPC-2303", which compactable with gooddisplay GDEY037Z03
 3. BE2266ES0550/TC026SC1C3-S5 2.66 inch black/white/red ePaper display panel. 
+4. E154A05N, 1.54 inch black/white ePaper display panel
 
 # Change Log
 20221001 Kimi Jin: 
@@ -37,3 +38,6 @@ This is a project for driving the ePaper display panel with STM32, here I'm usin
 	1. Fixing the init and turn on parameters for DEPG0420BNS
 	2. Now DEPG0420BNS is fully supported and been tested
 
+20221005 Kimi Jin:
+	
+	1. Adding support for E154A05N(tested) epd
