@@ -41,3 +41,7 @@ This is a project for driving the ePaper display panel with STM32, here I'm usin
 20221005 Kimi Jin:
 	
 	1. Adding support for E154A05N(tested) epd
+	
+20221006 Kimi Jin:
+
+	1. Adding configuration for spi flash W25Q128
